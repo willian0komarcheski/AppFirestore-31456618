@@ -45,14 +45,19 @@ dependencies {
     // Import the Firebase BoM (see: https://firebase.google.com/docs/android/learn-more#bom)
     implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
 
+
+    implementation("com.google.firebase:firebase-analytics")
+
     // Firestore
     implementation("com.google.firebase:firebase-firestore-ktx")
 
     // Other Firebase/Play services deps
     implementation("com.google.firebase:firebase-auth-ktx")
 
+    implementation ("com.google.android.gms:play-services-base:18.5.0")
+
     // Pinned to 20.7.0 as a workaround for issue https://github.com/firebase/quickstart-android/issues/1647
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
 
     // FirebaseUI (for authentication)
     implementation("com.firebaseui:firebase-ui-auth:8.0.2")
@@ -61,7 +66,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.vectordrawable:vectordrawable-animated:1.2.0")
     implementation("androidx.cardview:cardview:1.0.0")
-    implementation("androidx.browser:browser:1.5.0")
+    implementation("androidx.browser:browser:1.8.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.multidex:multidex:2.0.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")

@@ -11,7 +11,7 @@ class FirestoreInitializer : Initializer<FirebaseFirestore> {
 
     // The host '10.0.2.2' is a special IP address to let the
     // Android emulator connect to 'localhost'.
-    private val FIRESTORE_EMULATOR_HOST = " 127.0.0.1"
+    private val FIRESTORE_EMULATOR_HOST = "10.0.2.2"
     private val FIRESTORE_EMULATOR_PORT = 8080
 
     override fun create(context: Context): FirebaseFirestore {
