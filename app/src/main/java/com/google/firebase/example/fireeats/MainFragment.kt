@@ -63,6 +63,14 @@ class MainFragment : Fragment(),
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Firestore
+        firestore = Firebase.firestore
+
+        // Get the 50 highest rated restaurants
+        query = firestore.collection("restaurants")
+            .orderBy("avgRating", Query.Direction.DESCENDING)
+            .limit(LIMIT.toLong())
+
         // View model
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
 
